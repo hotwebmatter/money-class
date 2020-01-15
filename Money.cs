@@ -10,5 +10,11 @@ namespace money_class
                     cents;
         public int Dollars { get; set; }
         public int Cents { get; set; }
+        // constructors
+        public Money()
+        {
+            dollars = 46;
+            cents = 75;
+        }
     }
 }
