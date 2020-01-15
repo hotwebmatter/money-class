@@ -22,5 +22,11 @@ namespace money_class
             dollars = (int)Math.Floor(dollarsAndCents);
             cents = (int)(dollarsAndCents - Math.Floor(dollarsAndCents)) * 100;
         }
+        // accept two arguments, per spec
+        public Money(int d, int c)
+        {
+            dollars = d;
+            cents = c;
+        }
     }
 }
