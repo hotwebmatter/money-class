@@ -19,8 +19,8 @@ namespace money_class
         // accept single argument, per spec
         public Money (double dollarsAndCents)
         {
-            dollars = Math.Floor(dollarsAndCents);
-            cents = (dollarsAndCents - Math.Floor(dollarsAndCents)) * 100;
+            dollars = (int)Math.Floor(dollarsAndCents);
+            cents = (int)(dollarsAndCents - Math.Floor(dollarsAndCents)) * 100;
         }
     }
 }
