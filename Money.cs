@@ -6,5 +6,7 @@ namespace money_class
 {
     class Money
     {
+        private int dollars,
+                    cents;
     }
 }
