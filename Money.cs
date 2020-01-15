@@ -8,5 +8,7 @@ namespace money_class
     {
         private int dollars,
                     cents;
+        public int Dollars { get; set; }
+        public int Cents { get; set; }
     }
 }
