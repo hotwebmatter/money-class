@@ -15,13 +15,14 @@ namespace money_class
         public Money()
         {
             dollars = 46;
-            cents = 75;
+            cents = 87;
         }
         // accept single argument, per spec
         public Money (double dollarsAndCents)
         {
             dollars = (int)Math.Floor(dollarsAndCents);
-            cents = (int)(dollarsAndCents - Math.Floor(dollarsAndCents)) * 100;
+            double centsRemaining = (dollarsAndCents - dollars) * 100;
+            cents = (int)centsRemaining;
         }
         // accept two arguments, per spec
         public Money(int d, int c)
