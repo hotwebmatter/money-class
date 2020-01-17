@@ -35,5 +35,10 @@ namespace money_class
             dollars += (int)Math.Floor(dollarsAndCents);
             cents += (int)(dollarsAndCents - Math.Floor(dollarsAndCents)) * 100;
         }
+        public void DecrementMoney(double dollarsAndCents)
+        {
+            dollars -= (int)Math.Floor(dollarsAndCents);
+            cents -= (int)(dollarsAndCents - Math.Floor(dollarsAndCents)) * 100;
+        }
     }
 }
