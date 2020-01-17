@@ -29,5 +29,11 @@ namespace money_class
             dollars = d;
             cents = c;
         }
+        // instance methods
+        public void IncrementMoney(double dollarsAndCents)
+        {
+            dollars += (int)Math.Floor(dollarsAndCents);
+            cents += (int)(dollarsAndCents - Math.Floor(dollarsAndCents)) * 100;
+        }
     }
 }
