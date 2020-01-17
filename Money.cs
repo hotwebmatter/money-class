@@ -15,7 +15,7 @@ namespace money_class
         public Money()
         {
             dollars = 46;
-            cents = 87;
+            cents = 50;
         }
         // accept single argument, per spec
         public Money (double dollarsAndCents)
@@ -31,15 +31,15 @@ namespace money_class
             cents = c;
         }
         // instance methods
-        public void IncrementMoney(double dollarsAndCents)
+        public void IncrementMoney(int d, int c)
         {
-            dollars += (int)Math.Floor(dollarsAndCents);
-            cents += (int)(dollarsAndCents - Math.Floor(dollarsAndCents)) * 100;
+            dollars += d;
+            cents += c;
         }
-        public void DecrementMoney(double dollarsAndCents)
+        public void DecrementMoney(int d, int c)
         {
-            dollars -= (int)Math.Floor(dollarsAndCents);
-            cents -= (int)(dollarsAndCents - Math.Floor(dollarsAndCents)) * 100;
+            dollars -= d;
+            cents -= c;
         }
         public string MakeChange()
         {
