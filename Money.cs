@@ -15,7 +15,7 @@ namespace money_class
         public Money()
         {
             dollars = 46;
-            cents = 87;
+            cents = 50;
         }
         // accept single argument, per spec
         public Money (double dollarsAndCents)
