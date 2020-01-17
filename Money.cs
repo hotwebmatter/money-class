@@ -53,5 +53,9 @@ namespace money_class
             result += String.Format("{0}: {1}\n", "Pennies", centsRemaining);
             return result;
         }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
