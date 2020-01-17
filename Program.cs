@@ -7,8 +7,8 @@ namespace money_class
         static void Main(string[] args)
         {
             Money aMoney = new Money();
-            Money bMoney = new Money(3.27);
-            Money cMoney = new Money(17, 48);
+            Money bMoney = new Money(3.17);
+            Money cMoney = new Money(17, 44);
             Console.WriteLine("{0}: {1}\n", "aMoney", aMoney.ToString());
             Console.WriteLine(aMoney.MakeChange());
             Console.WriteLine("{0}: {1}\n", "bMoney", bMoney.ToString());
