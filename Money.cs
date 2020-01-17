@@ -55,7 +55,8 @@ namespace money_class
         }
         public override string ToString()
         {
-            return base.ToString();
+            string result = String.Format("${0:N0}.{1}", dollars, cents);
+            return result;
         }
     }
 }
