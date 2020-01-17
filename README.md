@@ -2,30 +2,52 @@
 
 Tenth programming exercise in Chapter Four
 
+Note that IncrementMoney() and DecrementMoney() methods will
+need to be refactored to increment and decrement dollars
+appropriately when cents greater than 100 are specified.
+
+An alternative approach would be to accept a double as an
+argument, instead of two integer arguments, and process
+accordingly. This approach works in the single-argument
+constructor, but it did not work on my first try with the
+increment and decrement methods.
+
 ## Example output
 ```
 $ dotnet bin/Debug/netcoreapp2.1/money-class.dll
-aMoney: $46.87
+aMoney: $46.50
 
-Dollars: 46
-Quarters: 3
-Dimes: 1
-Nickels: 0
-Pennies: 2
+aMoney.IncrementMoney(2, 17): $48.67
 
-bMoney: $3.16
-
-Dollars: 3
-Quarters: 0
+Dollars: 48
+Quarters: 2
 Dimes: 1
 Nickels: 1
-Pennies: 1
+Pennies: 2
 
-cMoney: $17.44
+aMoney.DecrementMoney(2, 17): $46.50
 
-Dollars: 17
+bMoney: $3.25
+
+bMoney.IncrementMoney(2, 17): $5.42
+
+Dollars: 5
 Quarters: 1
 Dimes: 1
 Nickels: 1
-Pennies: 4
+Pennies: 2
+
+bMoney.DecrementMoney(2, 17): $3.25
+
+cMoney: $17.75
+
+cMoney.IncrementMoney(2, 17): $19.92
+
+Dollars: 19
+Quarters: 3
+Dimes: 1
+Nickels: 1
+Pennies: 2
+
+cMoney.DecrementMoney(2, 17): $17.75
 ```
