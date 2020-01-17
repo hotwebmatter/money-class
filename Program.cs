@@ -7,6 +7,7 @@ namespace money_class
         static void Main(string[] args)
         {
             Money aMoney = new Money();
+            Money bMoney = new Money(3.27);
             Console.WriteLine("Hello World!");
         }
     }
