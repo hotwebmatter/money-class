@@ -6,6 +6,7 @@ namespace money_class
 {
     class Money
     {
+        // data members
         private int dollars,
                     cents;
         public int Dollars { get; set; }
@@ -27,6 +28,35 @@ namespace money_class
         {
             dollars = d;
             cents = c;
+        }
+        // instance methods
+        public void IncrementMoney(double dollarsAndCents)
+        {
+            dollars += (int)Math.Floor(dollarsAndCents);
+            cents += (int)(dollarsAndCents - Math.Floor(dollarsAndCents)) * 100;
+        }
+        public void DecrementMoney(double dollarsAndCents)
+        {
+            dollars -= (int)Math.Floor(dollarsAndCents);
+            cents -= (int)(dollarsAndCents - Math.Floor(dollarsAndCents)) * 100;
+        }
+        public string MakeChange()
+        {
+            int centsRemaining = cents;
+            string result = String.Format("{0}: {1}\n", "Dollars", dollars);
+            result += String.Format("{0}: {1}\n", "Quarters", centsRemaining / 25);
+            centsRemaining %= 25;
+            result += String.Format("{0}: {1}\n", "Dimes", centsRemaining / 10);
+            centsRemaining %= 10;
+            result += String.Format("{0}: {1}\n", "Nickels", centsRemaining / 5);
+            centsRemaining %= 5;
+            result += String.Format("{0}: {1}\n", "Pennies", centsRemaining);
+            return result;
+        }
+        public override string ToString()
+        {
+            string result = String.Format("${0:N0}.{1}", dollars, cents);
+            return result;
         }
     }
 }
