@@ -6,6 +6,7 @@ namespace money_class
     {
         static void Main(string[] args)
         {
+            Money aMoney = new Money();
             Console.WriteLine("Hello World!");
         }
     }
