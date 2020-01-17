@@ -34,12 +34,14 @@ namespace money_class
         public void IncrementMoney(int d, int c)
         {
             dollars += d;
-            cents += c;
+            dollars += c / 100;
+            cents += c % 100;
         }
         public void DecrementMoney(int d, int c)
         {
             dollars -= d;
-            cents -= c;
+            dollars -= c / 100;
+            cents -= c % 100;
         }
         public string MakeChange()
         {
