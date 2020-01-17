@@ -6,6 +6,7 @@ namespace money_class
 {
     class Money
     {
+        // data members
         private int dollars,
                     cents;
         public int Dollars { get; set; }
